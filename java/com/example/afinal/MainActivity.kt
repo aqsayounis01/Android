@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -25,6 +26,8 @@ lateinit var b2 :Button
 lateinit var t: TextView
 lateinit var et:EditText
 lateinit var image:ImageView
+lateinit var male:CheckBox
+lateinit var female:CheckBox
 //    lateinit var l:ListView
 //    var item=ArrayList<String>()
 //    var ff=filefile()
@@ -38,6 +41,9 @@ lateinit var image:ImageView
     t=findViewById(R.id.tv)
     et=findViewById(R.id.edittext)
     image=findViewById(R.id.imageView6)
+    male=findViewById(R.id.c1)
+    female=findViewById(R.id.c2)
+
 //        l=findViewById(R.id.list)
 
         //after adding it will show on the activity
@@ -76,7 +82,18 @@ b2.setOnClickListener {
 t.setText("thankyou for using the app")
 }
 
-
+male.setOnClickListener()
+{
+    if(male.isChecked)
+    {
+        image.setImageResource(R.drawable.ic_launcher_background)
+        female.isChecked=false
+    }
+    else
+    {
+        image.setImageResource(R.drawable.hr2)
+    }
+}
 
         toolbar.setOnClickListener() {
 
