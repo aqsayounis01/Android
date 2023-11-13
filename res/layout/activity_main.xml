@@ -116,6 +116,7 @@
             android:text="male"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
@@ -129,6 +130,42 @@
             app:layout_constraintStart_toStartOf="@+id/c1"
             app:layout_constraintTop_toTopOf="@+id/c1" />
 
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="198dp"
+            android:layout_height="126dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="87dp">
+
+            <RadioButton
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                android:checked="false"/>
+        </RadioGroup>
+
+
+        <ToggleButton
+            android:id="@+id/tb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EC9D9D"
+            android:buttonTint="#07141E"
+            android:checked="true"
+            android:clickable="true"
+            android:text="ToggleButton"
+            android:textOff="BackOff"
+            android:textOn="BackOn"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="254dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -10,7 +10,10 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RadioButton
 import android.widget.TextView
+import android.widget.ToggleButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.Toolbar
@@ -28,6 +31,10 @@ lateinit var et:EditText
 lateinit var image:ImageView
 lateinit var male:CheckBox
 lateinit var female:CheckBox
+lateinit var r1:RadioButton
+lateinit var r2 :RadioButton
+lateinit var tb:ToggleButton
+
 //    lateinit var l:ListView
 //    var item=ArrayList<String>()
 //    var ff=filefile()
@@ -43,9 +50,10 @@ lateinit var female:CheckBox
     image=findViewById(R.id.imageView6)
     male=findViewById(R.id.c1)
     female=findViewById(R.id.c2)
-
+    r1=findViewById(R.id.r1)
 //        l=findViewById(R.id.list)
-
+    r2=findViewById(R.id.r2)
+    tb=findViewById(R.id.tb)
         //after adding it will show on the activity
 //        item=ff.rd(this)
 //        var arrayadapter=ArrayAdapter(this,android.R.layout.simple_list_item_1,android.R.id.text1
@@ -75,13 +83,30 @@ lateinit var female:CheckBox
         var work:String = et.text.toString()
         b2.text=work
 //      or  b2.setText(work)
+        if(r1.isChecked)
+        {
+            cl.setBackgroundColor(Color.RED)
+        }
+        else if(r2.isChecked)
+        {
+            cl.setBackgroundColor(Color.GREEN)
+        }
 
     }
 
 b2.setOnClickListener {
 t.setText("thankyou for using the app")
 }
-
+tb.setOnCheckedChangeListener { b, isChecked ->
+    if(isChecked)
+    {
+        image.visibility=View.INVISIBLE
+    }
+    else
+    {
+        image.visibility=View.VISIBLE
+    }
+}
 male.setOnClickListener()
 {
     if(male.isChecked)
@@ -117,6 +142,7 @@ var alert=AlertDialog.Builder(this)
             dialog.cancel()
         })
 
+
         alert.setPositiveButton("Yes", DialogInterface.OnClickListener() { dialog, which ->
 
             alert.setMessage("study").setPositiveButton("Yes", DialogInterface.OnClickListener(){dialog, which ->
@@ -128,5 +154,23 @@ var alert=AlertDialog.Builder(this)
         }).create().show()
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
