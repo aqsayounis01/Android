@@ -74,13 +74,13 @@
 
         <EditText
             android:id="@+id/edittext"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_width="199dp"
+            android:layout_height="49dp"
             android:ems="10"
             android:hint="enter the item "
             android:inputType="text"
             android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
@@ -96,13 +96,14 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="168dp"
-            android:layout_height="206dp"
-            android:layout_marginEnd="168dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="173dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="36dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/hr2" />
 
         <CheckBox
@@ -130,33 +131,37 @@
             app:layout_constraintStart_toStartOf="@+id/c1"
             app:layout_constraintTop_toTopOf="@+id/c1" />
 
+
         <RadioGroup
             android:id="@+id/rg"
             android:layout_width="198dp"
             android:layout_height="126dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="87dp">
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext">
 
             <RadioButton
                 android:id="@+id/r1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
-                android:checked="true"/>
+                android:checked="true"
+                android:text="RadioButton" />
 
             <RadioButton
                 android:id="@+id/r2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
-                android:checked="false"/>
+                android:checked="false"
+                android:text="RadioButton" />
         </RadioGroup>
-
 
         <ToggleButton
             android:id="@+id/tb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginBottom="52dp"
             android:backgroundTint="#EC9D9D"
             android:buttonTint="#07141E"
             android:checked="true"
@@ -164,8 +169,8 @@
             android:text="ToggleButton"
             android:textOff="BackOff"
             android:textOn="BackOn"
-            tools:layout_editor_absoluteX="53dp"
-            tools:layout_editor_absoluteY="254dp" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
